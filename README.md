@@ -1,2 +1,2 @@
 # HTML
-This repo contains code that i write at university during the lessons in the laboratory.
+This repo contains code that i write at university and some projects that i made.
