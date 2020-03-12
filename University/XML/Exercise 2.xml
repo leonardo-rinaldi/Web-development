@@ -1,0 +1,47 @@
+<!-- Exercise 2 -->
+<!-- Create an XML document to represent your bookmarks divided in folders -->
+<!-- Create also a DTD for this document -->
+
+<xml version="1.0">
+<!DOCTYPE address-book [
+         <!ELEMENT bookmark (Folder+)>
+         <!ELEMENT folder (site+)>
+         <!ELEMENT site (title, description, link)>
+         <!ELEMENT title (#PCDATA)>
+         <!ELEMENT description (#PCDATA)>
+         <!ELEMENT link (#PCDATA)>
+         
+         ]>
+    
+<bookmark>
+
+    <Folder>
+        <title>Folder1</title>
+        <site>
+            <title>Websitename</title>
+            <description>Description</description>
+            <link>http://www.example.com</link>
+        </site>
+    </Folder>
+
+    <Folder>
+        <title>Folder2</title>
+        <site>
+            <title>Websitename</title>
+            <description>Description</description>
+            <link>http://wwww.example.com</link>
+        </site>
+    </Folder>
+
+    <Folder>
+        <title>Folder3</title>
+        <site>
+            <title>Websitename</title>
+            <description>Description</description>
+            <link>http://www.example.com</link>
+        </site>
+    </Folder>
+
+</bookmark>
+    
+    

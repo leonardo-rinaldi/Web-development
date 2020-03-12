@@ -1,0 +1,23 @@
+<!--Exercise 6-->
+<!--Create a DTD for a document that represent a sms-->
+
+<xml version="1.0" encoding="UTF-8">
+<!DOCTYPE sms [
+
+<!ELEMENT sms (number, number, text )>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+
+<!ATTLIST sms date CDATA #REQUIRED>
+<!ATTLIST sms time CDATA #REQUIRED>
+<!ATTLIST tel type CDATA #REQUIRED>
+
+]>
+    
+<sms date="12/11/2003" time="15:30">
+	<number type="sender">349 111111</number>
+	<number type="recipient">349 222222</number>
+	<text>
+		Hi!
+	</text>
+</sms>

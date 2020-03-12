@@ -1,0 +1,33 @@
+<!-- Exercise 4 -->
+<!-- Create a DTD for this document -->
+
+<xml version="1.0">
+<!DOCTYPE address-book [
+         <!ELEMENT address-book (entry+)>
+         <!ELEMENT entry (name, address?, tel+, email*)>
+         <!ELEMENT name (#PCDATA)>
+         <!ELEMENT address (street, region, postal-code, locality, country)>
+         <!ELEMENT street (#PCDATA)>
+         <!ELEMENT region (#PCDATA)>
+         <!ELEMENT postal-code (#PCDATA)>
+         <!ELEMENT locality (#PCDATA)>
+         <!ELEMENT country (#PCDATA)>
+         <!ELEMENT tel (#PCDATA)>
+         <!ELEMENT email EMPTY>
+]>
+    
+<address-book>
+ <entry>
+    <name>John Doe</name>
+    <address>
+        <street>34 Fountain Square Plaza</street>
+        <region>OH</region><postal-code>45202</postal-code>
+        <locality>Cincinnati</locality><country>US</country>
+    </address>
+    <tel preferred="true">513-555-8889</tel>
+    <tel>513-555-7098</tel>
+    <email href="mailto:jdoe@email.com"/>
+ </entry>
+</address-book>
+ 
+

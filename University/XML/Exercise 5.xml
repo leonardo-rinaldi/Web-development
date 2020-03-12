@@ -1,0 +1,34 @@
+<!-- Exercise 5 -->
+<!-- Create a DTD for a document that represent a playlist -->
+
+<xml version="1.0" encoding="UTF-8">
+<!DOCTYPE playlist [
+    <!ELEMENT playlist (song+)>                 
+    <!ELEMENT song (title, author, album)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT album (#PCDATA)>
+    
+    <!ATTLIST song  number CDATA #REQUIRED
+                    format CDATA #REQUIRED
+                    bitrate CDATA #REQUIRED
+                    category CDATA #REQUIRED>
+    ]>
+    
+<playlist>
+	<song number="1" format="mp3" bitrate="128" category="rock">
+		<title>Idioteque</title>
+		<author>Radiohead</author>
+		<album>Kid A</album>
+	</song>
+	<song number="2" format="aiff" bitrate="1411" category="rock">
+		<title>Stand</title>
+		<author>REM</author>
+		<album>The best of</album>
+	</song>
+	<song number="3" format="mp3" bitrate="256" category="electronic">
+		<title>Science Friction</title>
+		<author>Orbital</author>
+		<album>Snivilization</album>
+	</song>
+</playlist>

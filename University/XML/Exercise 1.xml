@@ -1,0 +1,27 @@
+<!--First Exercise of XML-->
+<!--Create a XML document to rappresent your bookmarks-->
+
+<xml version="1.0">
+
+<bookmark>
+
+    <Website>
+        <title>Websitename</title>
+        <description>Description</description>
+        <link>http://www.example.com</link>
+    </Website>
+        
+    <Website>
+        <title>Websitename</title>
+        <description>Description</description>
+        <link>http://wwww.example.com</link>
+    </Website>
+
+    <Website>
+        <title>Website</title>
+        <description>Description</description>
+        <link>http://www.example.com</link>
+    </Website>
+
+</bookmark>
+

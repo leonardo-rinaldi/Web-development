@@ -1,0 +1,34 @@
+<!-- Exercise 3 -->
+<!-- Create a XML document to represent your playlist -->
+
+<xml version="1.0">
+
+<playlist>
+
+    <song1>
+        <file class="mp3">Song-1</file>
+        <title>Song-title</title>
+        <category>Song-category</category>
+        <artist>Artist-name</artist>
+        <image>image.jpg</image>
+    </song1>
+
+    <song2>
+        <file class="mp3">Song-2</file>
+        <title>Song-title</title>
+        <category>Song-category</category>
+        <artist>Artist-name</artist>
+        <image>image.jpg</image>
+    </song2>
+
+    <song3>
+        <file class="mp3"> Song-3</file>
+        <title>Song-title</title>
+        <category>Song-category</category>
+        <artist>Artist-name</artist>
+        <image>image.jpg</image>
+    </song3>
+
+</playlist>
+
+
