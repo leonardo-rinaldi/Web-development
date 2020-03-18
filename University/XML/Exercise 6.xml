@@ -11,6 +11,7 @@
 <!ATTLIST sms date CDATA #REQUIRED>
 <!ATTLIST sms time CDATA #REQUIRED>
 <!ATTLIST tel type CDATA #REQUIRED>
+<!ATTLIST tel tipo (sender | recipient) #REQUIRED>
 
 ]>
     
