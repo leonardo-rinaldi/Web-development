@@ -1,0 +1,41 @@
+<!--Exercise 12-->
+<!--DTD and XML file of an e-commerce-->
+<!--We have added the quantity of the product in the order-->
+
+<xml version="1.0" encoding="UTF-8">
+        
+<!DOCTYPE ecommerce [
+<!ELEMENT ecommerce (prodotto*,ordine*,cliente*)>
+<!ELEMENT prodotto (#PCDATA)>
+<!ELEMENT ordine (oggetto*)>
+<!ELEMENT cliente (#PCDATA)>
+<!ELEMENT oggetto EMPTY>
+<!ATTLIST prodotto prezzo CDATA REQUIRED>
+<!ATTLIST prodotto id_prodotto ID #REQUIRED>
+<!ATTLIST ordine id_ordine ID #REQUIRED>
+<!ATTLIST ordine data CDATA #REQUIRED>
+<!ATTLIST ordine rif_cliente IDREF #REQUIRED>
+<!ATTLIST cliente id_cliente ID #REQUIRED>
+<!ATTLIST oggetto rif_prodotto IDREF #REQUIRED>
+<!ATTLIST oggetto quantità CDATA #REQUIRED>
+
+]>
+    
+<ecommerce>
+    <prodotto prezzo="90$" id_prodotto="_01">Nome prodotto</prodotto>
+    <prodotto prezzo="90$" id_prodotto="_02">Nome prodotto</prodotto>
+    
+    <ordine id_ordine="o1" data="_19_03_2019" rif_cliente="c1">
+        <oggetto rif_prodotto="_01" quantità="1"></oggetto>
+        <oggetto rif_prodotto="_02" quantità="1"></oggetto>
+    </ordine>
+    
+    <ordine id_ordine="o2" data="_19_03_2019" rif_cliente="c2">
+        <oggetto rif_prodotto="_01" quantità="4"></oggetto>
+        <oggetto rif_prodotto="_02" quantità="16"></oggetto>
+    </ordine>
+    
+    <cliente id_cliente="c1">nome cliente</cliente>
+    <cliente id_cliente="c2">nome cliente</cliente>
+</ecommerce>
+

@@ -1,0 +1,32 @@
+<!--Exercise 11-->
+<!--e-commerce exercise-->
+<!--Exercise 10 with some modification, we have added a reference to the client that made the order-->
+
+<xml version="1.0" encoding="UTF-8">
+    
+<!DOCTYPE ecommerce [
+<!ELEMENT ecommerce (prodotto*,ordine*,cliente*)>
+<!ELEMENT prodotto (#PCDATA)>
+<!ELEMENT ordine EMPTY>
+<!ELEMENT cliente (#PCDATA)>
+<!ATTLIST prodotto prezzo CDATA #REQUIRED>
+<!ATTLIST prodotto id_prodotto ID #REQUIRED>
+<!ATTLIST ordine data CDATA #REQUIRED>
+<!ATTLIST ordine id_ordine ID #REQUIRED>
+<!ATTLIST ordine rif_prodotti IDREFS #REQUIRED>
+<!ATTLIST ordine rif_cliente IDREFS #REQUIRED>
+<!ATTLIST cliente id_cliente ID #REQUIRED>
+
+
+
+]>
+    
+<ecommerce>
+    <prodotto prezzo="90$" id_prodotto="_01">nome prodotto</prodotto>
+    <prodotto prezzo="80$" id_prodotto="_02">nome prodotto</prodotto>
+    <prodotto prezzo="70$" id_prodotto="_03">nome prodotto</prodotto>
+    <ordine data="_18_03_2020" id_ordine="ordine1" rif_prodotti="_01 _02" rif_cliente="C01"></ordine>
+    <ordine data="_18_03_2020" id_ordine="ordine2" rif_prodotti="_03" rif_cliente="C02"></ordine>
+    <cliente id_cliente="C01">Nome cliente</cliente>
+    <cliente id_cliente="C02">Nome cliente</cliente>
+</ecommerce>

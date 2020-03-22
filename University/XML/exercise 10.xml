@@ -1,0 +1,25 @@
+<!--Exercise 9-->
+<!--Create a DTD and a XML file for the products and orders of an e-commerce-->
+
+<xml version="1.0" encoding="UTF-8">
+    
+<!DOCTYPE e-commerce [
+<!ELEMENT e-commerce (product*, order*)>
+<!ELEMENT product (#PCDATA)>
+<!ELEMENT order EMPTY>
+<!ATTLIST product price CDATA #REQUIRED>
+<!ATTLIST product id_product ID #REQUIRED>
+<!ATTLIST order data CDATA #REQUIRED>
+<!ATTLIST order id_order ID #REQUIRED>
+<!ATTLIST order product IDREFS #REQUIRED>
+
+
+]>
+    
+<e-commerce>
+    <product price="90$" id_product="_001">product_name</product>
+    <product price="80$" id_product="_002">product_name</product>
+    <product price="70$" id_product="_003">product_name</product>
+    <order data="_18_03_2020" id_order="_100" product="_001 _002"></order>
+    <order data="_18_03_2020" id_order="_101" product="_003"></order>
+</e-commerce>

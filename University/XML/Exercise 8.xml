@@ -1,0 +1,25 @@
+<!--Exercise 8-->
+<!--IDREF -> ID exercise-->
+
+<xml version="1.0" encoding="UTF-8">
+
+<!DOCTYPE archivio [
+<!ELEMENT archivio (persona*, azienda*)>
+<!ELEMENT persona (#PCDATA)>
+<!ELEMENT azienda (#PCDATA)>
+<!ATTLIST persona indirizzo ID #REQUIRED
+                  nome ID #REQUIRED
+                  CF ID #REQUIRED
+                  lavora_in IDREF #REQUIRED>
+<!ATTLIST azienda PIVA ID #REQUIRED
+                  nome ID #REQUIRED
+                  attività ID #REQUIRED>
+
+
+]>
+
+<archivio>
+    <persona indirizzo="indirizzo" nome="nome e cognome" CF="codice fiscale" lavora_in="partita_iva_1">persona_1</persona>
+    
+    <azienda PIVA="partita_iva_1" nome="nome azienda" attività="tipo attività">azienda_1</azienda>
+</archivio>

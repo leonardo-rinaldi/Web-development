@@ -1,0 +1,26 @@
+<!--Exercise 7-->
+<!--Create an XML file to represent this DTD-->
+
+
+<xml version="1.0" encoding="UTF-8">
+    <!DOCTYPE giornale [
+    <!ELEMENT giornale (articolo+)>
+    <!ELEMENT titolo (#PCDATA)>
+    <!ELEMENT immagine EMPTY>
+    <!ELEMENT corpo (#PCDATA)>
+    <!ELEMENT note (#PCDATA)>
+    <!ATTLIST articolo autore CDATA #required>
+    <!ATTLIST immagine src CDATA #required>
+
+]>
+    
+<giornale>
+    <articolo autore="nome autore">
+        <titolo>titolo dell'articolo</titolo>
+        <sottotitolo>sottotitolo dell'articolo</sottotitolo>
+        <immagine src="sorgente immagine"> </immagine>  
+        <corpo>testo del corpo</corpo>
+        <note>note dell'articolo</note>
+    </articolo>
+
+</giornale>

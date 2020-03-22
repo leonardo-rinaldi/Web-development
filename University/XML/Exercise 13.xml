@@ -1,0 +1,44 @@
+<!--Exercise 13-->
+<!--Create a DTD and a XML file for the train transport-->
+
+<xml version="1.0" encoding="UTF-8">
+    
+<!DOCTYPE percorso_treni [
+<!ELEMENT percorso_treni (materiali, treno+, percorsi+, stazioni+)>
+<!ELEMENT materiali (locomotiva+, vagoni+)>
+<!ELEMENT treno EMPTY>
+<!ELEMENT percorso (#PCDATA)>
+<!ELEMENT stazione (#PCDATA)>
+<!ELEMENT locomotiva EMPTY>
+<!ELEMENT vagone EMPTY>
+<!ATTLIST locomotiva id_locomotiva ID #REQUIRED>
+<!ATTLIST vagone id_vagone ID #REQUIRED>
+<!ATTLIST treno id_treno ID #REQUIRED>
+                rif_locomotiva IDREF #REQUIRED>
+                rif_vagone IDREFS #REQUIRED>
+                rif_percorso IDREF #REQUIRED>
+<!ATTLIST percorsi rif_stazione IDREFS #REQUIRED>
+                   id_percorso ID #REQUIRED>
+<!ATTLIST stazione id_stazione ID #REQUIRED>
+    
+
+<percorso_treni>
+    <materiali>
+        <locomotiva id_locomotiva="loc_1"></locomotiva>
+        <locomotiva id_locomotiva="loc_2"></locomotiva>
+        <locomotiva id_locomotiva="loc_3"></locomotiva>
+        <vagone id_vagoni="vag_1"></vagone>
+        <vagone id_vagoni="vag_2"></vagone>
+        <vagone id_vagoni="vag_3"></vagone>
+        <vagone id_vagoni="vag_4"></vagone>
+        </materiali>
+    
+    <treno id_treno="treno1" rif_locomotiva="loc_1" rif_vagoni="vag_1, vag_2" rif_percorso="p_1">treno1</treno>
+    <treno id_treno="treno2" rif_locomotiva="loc_2" rif_vagoni="vag_3, vag_4" rif_percorso="p_2">treno2</treno>
+    
+    <percorsi rif_stazione="Udine_Casarsa" id_percorso="p_1">Da Udine a Casarsa</percorsi>
+    <percorsi rif_stazione="Casarsa_Udine" id_percorso="p_2">Da Casarsa a Udine</percorsi>
+    
+    <stazione id_stazione="Udine">Udine</stazione>
+    <stazione id_stazione="Casarsa">Casarsa</stazione>
+</percorso_treni>
