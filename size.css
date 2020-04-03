@@ -1,0 +1,61 @@
+/* CSS Media Queries */
+
+
+/* Desktop/laptop */
+
+
+/* Desktop 1281px or higher */
+
+@media (min-width: 1281px) {
+  
+  /* Insert CSS here */
+  
+}
+
+/* For laptops and desktop 1025px to 1280px */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* Insert CSS here */
+  
+}
+
+
+/* Smartphone */
+
+
+/* For smartphone, 320px to 479px*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* Insert CSS here */
+  
+}
+
+/* For low resolution tablets, smartphone 481px to 757px*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* Insert CSS here */
+  
+}
+
+
+/* Tablet/iPad */
+
+
+/* For tablet and iPads (portrait) 768px to 1024px */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* Insert CSS here */
+  
+}
+
+/* For tablets and iPad (landscape) 768px to 1024px*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* Insert CSS here */
+  
+}
