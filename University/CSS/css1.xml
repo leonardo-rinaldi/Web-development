@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="css1.css" type="text/css" title="miocss" ?>
+<address-book>
+<entry>
+	<name>Jack Smith</name>
+	<tel>513-555-3465</tel>
+	<email href="mailto:jsmith@emailaholic.com"/>
+</entry>
+<entry>
+	<name>John Doe</name>
+	<address>
+		<street>35 Fountain Square Plaza</street>
+		<region>OH</region>
+		<postal-code>45202</postal-code>
+		<locality>Cincinnati</locality>
+		<country>US</country>
+	</address>
+	<tel preferred="true">513-555-8889</tel>
+	<tel preferred="false">513-555-7098</tel>
+	<email href="mailto:jdoe@emailaholic.com"/>
+</entry>
+</address-book>

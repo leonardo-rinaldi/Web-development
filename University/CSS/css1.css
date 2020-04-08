@@ -1,0 +1,64 @@
+entry {
+    display: block;
+    background-color: #fff;
+    opacity: 0.8;
+    width: 400px;
+    border-bottom: 4px solid black;
+    padding: 20px;
+    margin: 3px auto;   
+       
+       
+}
+
+* {
+    font-family: Helvetica, Arial, san-serif;
+    color: black;
+}
+
+
+address, tel, street {
+    display: block;
+    margin-bottom: 5px;
+}
+
+tel {
+    padding: 4px;
+    font-weight: bold;
+}
+
+
+address-book {
+    background-image: url(iStock1.jpg);
+}
+
+tel:hover {
+    background-color: #f4ff85; 
+    color: black;
+}
+
+tel[preferred="false"]{
+    font-weight: normal;
+    color: #666;
+}
+
+street {
+    font-family: "Hoefler Text", Georgia, serif;
+    font-style: italic;
+    font-size: 16pt
+}
+
+locality { 
+    font-variant: small-caps;
+    
+}
+
+name::before {
+    content: "Contatto";
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    color: #999;
+}
