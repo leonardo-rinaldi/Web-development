@@ -6,7 +6,7 @@
 <!DOCTYPE percorso_treni [
 <!ELEMENT percorso_treni (materiali, treno+, percorsi+, stazioni+)>
 <!ELEMENT materiali (locomotiva+, vagoni+)>
-<!ELEMENT treno EMPTY>
+<!ELEMENT treno (#PCDATA)>
 <!ELEMENT percorso (#PCDATA)>
 <!ELEMENT stazione (#PCDATA)>
 <!ELEMENT locomotiva EMPTY>
