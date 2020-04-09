@@ -12,7 +12,7 @@
 <!ELEMENT locomotiva EMPTY>
 <!ELEMENT vagone EMPTY>
 <!ATTLIST locomotiva id_locomotiva ID #REQUIRED>
-<!ATTLIST vagone id_vagone ID #REQUIRED>
+<!ATTLIST vagone id_vagoni ID #REQUIRED>
 <!ATTLIST treno id_treno ID #REQUIRED>
                 rif_locomotiva IDREF #REQUIRED>
                 rif_vagone IDREFS #REQUIRED>
