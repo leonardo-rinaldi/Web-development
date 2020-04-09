@@ -15,7 +15,7 @@
 <!ATTLIST vagone id_vagoni ID #REQUIRED>
 <!ATTLIST treno id_treno ID #REQUIRED>
                 rif_locomotiva IDREF #REQUIRED>
-                rif_vagone IDREFS #REQUIRED>
+                rif_vagoni IDREFS #REQUIRED>
                 rif_percorso IDREF #REQUIRED>
 <!ATTLIST percorsi rif_stazione IDREFS #REQUIRED>
                    id_percorso ID #REQUIRED>
@@ -36,8 +36,8 @@
     <treno id_treno="treno1" rif_locomotiva="loc_1" rif_vagoni="vag_1, vag_2" rif_percorso="p_1">treno1</treno>
     <treno id_treno="treno2" rif_locomotiva="loc_2" rif_vagoni="vag_3, vag_4" rif_percorso="p_2">treno2</treno>
     
-    <percorsi rif_stazione="Udine_Casarsa" id_percorso="p_1">Da Udine a Casarsa</percorsi>
-    <percorsi rif_stazione="Casarsa_Udine" id_percorso="p_2">Da Casarsa a Udine</percorsi>
+    <percorsi rif_stazione="Udine Casarsa" id_percorso="p_1">Da Udine a Casarsa</percorsi>
+    <percorsi rif_stazione="Casarsa Udine" id_percorso="p_2">Da Casarsa a Udine</percorsi>
     
     <stazione id_stazione="Udine">Udine</stazione>
     <stazione id_stazione="Casarsa">Casarsa</stazione>
