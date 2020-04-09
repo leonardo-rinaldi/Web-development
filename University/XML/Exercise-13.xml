@@ -21,6 +21,7 @@
                    id_percorso ID #REQUIRED>
 <!ATTLIST stazione id_stazione ID #REQUIRED>
     
+]>
 
 <percorso_treni>
     <materiali>
