@@ -6,6 +6,7 @@
     <!DOCTYPE giornale [
     <!ELEMENT giornale (articolo+)>
     <!ELEMENT titolo (#PCDATA)>
+    <!ELEMENT sottotitolo (#PCDATA)>
     <!ELEMENT immagine EMPTY>
     <!ELEMENT corpo (#PCDATA)>
     <!ELEMENT note (#PCDATA)>
