@@ -1,0 +1,181 @@
+body {
+     margin: 0px;
+     font-family: sans-serif;
+}
+ header {
+     background-color: white;
+     opacity: 0.8;
+     width: 100%;
+     height: 60px;
+     display: block;
+     position: fixed;
+     top: 0px;
+     z-index: 100;
+}
+ #logo {
+     height: 60px;
+     position: fixed;
+     padding-left: 130px;
+}
+ .navbar {
+     text-align: right;
+     text-transform: uppercase;
+     font-weight: 900;
+     padding-top: 20px;
+     margin-right: 190px;
+}
+ .navbar .link {
+     padding-left: 20px;
+     text-decoration: none;
+     color: #616161;
+}
+ .link:hover {
+     color: #f9a825;
+}
+ .background-image {
+     background-image: url(img/wallpaper.jpg);
+     background-position: center;
+     background-attachment: fixed;
+     height: 400px;
+     margin-top: 60px;
+     display: block;
+}
+ .background-image h1 {
+     color: white;
+     text-align: center;
+     padding-top: 130px;
+     margin-bottom: 0px;
+     font-size: 70px;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+}
+ .background-image h5 {
+     color: white;
+     margin-top: 10px;
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 15px;
+}
+ .author {
+     color: #f9a825;
+}
+ .articolo {
+     width: 60%;
+     padding-left: 70px;
+     padding-top: 90px;
+     float: left;
+     display: block;
+}
+ .articolo p {
+     line-height: 1.5em;
+     color: #757575;
+     margin-bottom: 20px 
+}
+ .menu {
+     background-color: #eeeeee;
+     float: right;
+     height: 100%;
+     width: 20%;
+     margin-top: 90px;
+     margin-right: 70px;
+     border-radius: 10px;
+     text-align: left;
+}
+ .menu h2 {
+     text-align: center;
+     margin-bottom: 0px;
+     color: #424242;
+}
+ .menu .link{
+     display: block;
+     text-decoration: none;
+     padding-top: 10px;
+     text-align: center;
+     color: #616161;
+}
+ .About-me h2 {
+     text-align: center;
+     padding-left: 0px;
+}
+ .photo {
+     height: 90px;
+     width: 90px;
+     background-image:url(img/about.png);
+     background-position: center;
+     border-radius: 50%;
+     display: block;
+     margin-left: auto;
+    /*serve per centrare un immagine */
+     margin-right: auto;
+    /*serve per centrare un immagine */
+     margin-top: 10px;
+}
+ .About-me {
+     text-align: center;
+     padding-left: 10px;
+     padding-right: 10px;
+     color: #616161;
+     line-height: 1.5em;
+}
+ .menu .suscribe {
+     padding-bottom: 20px;
+}
+ .menu .link:hover {
+     color: #f9a825;
+}
+ .comment {
+     width: 900px;
+     height: 100%;
+     float: left;
+     display: block;
+     margin-top: 20px;
+     margin-left: 70px;
+     display: block;
+}
+ .comment h2 {
+     color: #616161;
+     letter-spacing: 1px;
+     font-size: 20px;
+}
+ textarea {
+     background-color:#eeeeee;
+     height: 200px;
+     width: 850px;
+     padding:20px;
+     font-family: sans-serif;
+     font-size:17px;
+     letter-spacing: 1px;
+     color: #616161;
+}
+ .comment button {
+     height: 50px;
+     width: 200px;
+     background-color: white;
+     color: #f9a825;
+     border: 2px solid #f9a825;
+     font-size: 17px;
+     margin-top: 20px;
+     float: right;
+     margin-right: 9px;
+}
+ button:hover {
+     background-color: #f9a825;
+     color: white;
+     border-color: #ff6f00;
+}
+ footer {
+     width: 100%;
+     height: 100px;
+     background-color: black;
+     color: white;
+     float: left;
+     margin-top: 60px;
+}
+ footer p {
+     text-align: center;
+     padding-top: 20px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     font-weight: 500;
+     color: #616161;
+}
