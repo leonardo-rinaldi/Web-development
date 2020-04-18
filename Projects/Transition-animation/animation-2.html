@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset=utf-8 />
+        <title>Transition2</title>
+        
+    
+        <style>
+        
+            div {
+                width: 50px;                /*definisco come è fatto il box*/
+                height: 50px;
+                background-color: #3f51b5;
+                position: absolute;
+                border-radius: 50%;
+                
+                animation-name: spostamento;  /*nome animazione*/
+                animation-duration: 5s;     /*durata animazione*/     
+                animation-iteration-count: 10; /*quante volte viene ripetuta l'animazione*/
+                
+                }
+            
+            @keyframes spostamento {
+                0% {top: 20px; left: 20px;}         /*gestitsce le fasi dello spostamento*/
+                25% {top: 20px; left: 100px;}
+                30% {top: 90px; left: 100px;}
+                50%{top: 90px; left: 300px;}
+                70% {top: 130px; left: 300px;}
+                90% {top: 130px; left: 20px;}
+                100% {top: 20px; left: 20px;}
+                
+                
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+    
+        <div></div> 
+        
+    </body>
+    
+</html>
