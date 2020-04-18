@@ -1,2 +1,2 @@
 # Web Development
-This repo contains code that i write at university and some projects that i made.
+This repo contains code that I write at university and some projects that I made.
