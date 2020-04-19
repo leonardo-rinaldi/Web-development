@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <meta charset="utf-8"/>
+        <title>transition-2</title>
+        
+        <style>
+            
+            div {
+                background-color: #f57c00;
+                border-radius: 50%;
+                opacity: .9;
+                height: 80px;
+                width: 80px;
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                
+                transition-property: height, width, top, left opacity;
+                transition-duration: 1s;
+                transition-timing-function: cubic-bezier(1,0,.89,.78);
+                
+            }
+            
+            div:hover {
+                height: 200px;
+                width: 200px;
+                top: 40px;
+                left: 40px;
+                opacity: .0;
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div></div>
+    
+    </body>
+
+</html>
