@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <meta charset="utf-8"/>
+        <title>animation-4</title>
+        
+       <style>
+        
+           div {
+               background-color: #f57c00;
+               border-radius: 50%;
+               height: 80px;
+               width: 80px;
+               position: absolute;
+               top: 200px;
+               left: 200px;
+               
+               animation-name: animazione;
+               animation-duration: 5s;
+               animation-iteration-count: infinite;
+           }
+           
+           @keyframes animazione {
+               0%{transform:scale(1,1)}
+               50%{transform:scale(2,2)}
+               100%{transform:scale(1,1)}
+           }
+        
+        </style>
+        
+    </head>
+    
+    <body>
+    
+        <div></div>
+    
+    </body>
+    
+</html>
