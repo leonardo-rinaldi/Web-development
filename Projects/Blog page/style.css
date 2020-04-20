@@ -13,8 +13,9 @@ body {
      z-index: 100;
 }
  #logo {
-     height: 60px;
+     height: 40px;
      position: fixed;
+     padding-top: 10px;
      padding-left: 130px;
 }
  .navbar {
