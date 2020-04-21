@@ -1,0 +1,132 @@
+html {
+	font-family: sans-serif;
+}
+
+.contenitore {
+	background-color: #212121;
+	height: 400px;
+	width: 560px;
+	position: absolute;
+	top: 60px;
+	left: 30px;
+	border-radius: 20px;
+}
+
+.contenitore p {
+	color: white;
+	margin-left: 30px;
+	text-transform: uppercase;
+}
+
+.barra-principale {
+	width: 500px;
+	height: 20px;
+	margin-left: 30px;
+	background-color: #0d47a1;
+	border-radius: 20px;
+}
+
+.barra-1 {
+	position: absolute;
+	width: 450px;
+	height: 20px;
+	left: 30px;
+	top: 50px;
+	border-radius: 20px;
+	background-color: #3d5afe;
+	animation-name: ani-1;
+	animation-duration: 2s;
+}
+
+@keyframes ani-1 {
+	0% {
+		width: 0px
+	}
+	100% {
+		width: 450px
+	}
+}
+
+.barra-2 {
+	position: absolute;
+	width: 400px;
+	height: 20px;
+	left: 30px;
+	top: 120px;
+	border-radius: 20px;
+	background-color: #3d5afe;
+	animation-name: ani-2;
+	animation-duration: 2s;
+}
+
+@keyframes ani-2 {
+	0% {
+		width: 0px
+	}
+	100% {
+		width: 400px
+	}
+}
+
+.barra-3 {
+	position: absolute;
+	width: 350px;
+	height: 20px;
+	left: 30px;
+	top: 190px;
+	border-radius: 20px;
+	background-color: #3d5afe;
+	animation-name: ani-3;
+	animation-duration: 2s;
+}
+
+@keyframes ani-3 {
+	0% {
+		width: 0px
+	}
+	100% {
+		width: 350px;
+	}
+}
+
+.barra-4 {
+	position: absolute;
+	width: 420px;
+	height: 20px;
+	left: 30px;
+	top: 260px;
+	border-radius: 20px;
+	background-color: #3d5afe;
+	animation-name: ani-4;
+	animation-duration: 2s;
+}
+
+@keyframes ani-4 {
+	0% {
+		width: 0px
+	}
+	100% {
+		width: 420px
+	}
+}
+
+.barra-5 {
+	position: absolute;
+	width: 350px;
+	height: 20px;
+	left: 30px;
+	top: 330px;
+	border-radius: 20px;
+	background-color: #3d5afe;
+	animation-name: ani-5;
+	animation-duration: 2s;
+}
+
+@keyframes ani-5 {
+	0% {
+		width: 0px
+	}
+	100% {
+		width: 350px
+	}
+}
