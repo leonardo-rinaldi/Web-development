@@ -1,0 +1,45 @@
+
+html {
+    font-family: sans-serif;
+}
+
+
+@media all and (orientation: portrait) {
+    
+    body {
+        background-color: #ff9800;
+    }
+    
+    #portrait {
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        display: block;
+        margin-top: 50%;
+    }
+    
+    #landscape {
+        display: none;
+    }
+}
+
+
+
+@media all and (orientation: landscape) {
+    
+    body {
+        background-color: #00b0ff;
+    }
+    
+    #landscape {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    margin-top: 20%;
+ }
+    
+    #portrait {
+        display: none;
+    }
+}
