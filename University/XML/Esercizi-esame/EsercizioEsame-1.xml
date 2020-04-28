@@ -21,9 +21,9 @@
 
 <!DOCTYPE aereoporto [
 
-<!ELEMENT aereoporto (volo+) (personale+) (passeggero+)>
+<!ELEMENT aereoporto (volo+, personale+, passeggero+)>
 
-<!ELEMENT volo (partenza) (arrivo) (stato) (personale) (passeggeri) (luogo-di-partenza) (luogo-di-arrivo)>
+<!ELEMENT volo (partenza, arrivo, stato, personale, passeggeri, luogo-di-partenza, luogo-di-arrivo)>
 <!ELEMENT partenza (#PCDATA)>
 <!ELEMENT arrivo (#PCDATA)>
 <!ELEMENT stato (#PCDATA)>
@@ -32,12 +32,12 @@
 <!ELEMENT luogo-partenza (#PCDATA)>
 <!ELEMENT luogo-arrivo (#PCDATA)>
 
-<!ELEMENT personale (nome) (cognome) (ruolo)>
+<!ELEMENT personale (nome, cognome, ruolo)>
 <!ELEMENT nome (#PCDATA)>
 <!ELEMENT cognome (#PCDATA)>
 <!ELEMENT ruolo (#PCDATA)>
 
-<!ELEMENT passeggero (nome) (cognome) (posto-a-sedere) (classe)>
+<!ELEMENT passeggero (nome, cognome, posto-a-sedere, classe)>
 <!ELEMENT nome (#PCDATA)>
 <!ELEMENT cognome (#PCDATA)>
 <!ELEMENT posto-a-sedere (#PCDATA)>
