@@ -1,0 +1,133 @@
+<!--Esempio esercizio per esame-->
+<!-- 
+     Si scriva un documento XML valido dotato di DTD interno in modo da gestire
+     partenze e arrivi di un aereoporto. Si possono (ma non è obbligatorio) 
+     considerare i seguenti suggerimenti per le entità principali: il volo, il
+     personale, il passeggero.
+     
+     Volo: identificato da un ID, ora partenza e arrivo, luogo di partenza e
+            destinazione, stato(in orario, in ritardo).
+
+     Personale: Matricola_id, nome, cognome, ruolo(assistente, capitano, copilota)
+
+     Passeggero: ID, nome, cognome, posto a sedere, prima o seconda classe.
+
+     Si gestiscano i RIFERIMENTI tra il volo e il suo personale e i suoi passeggeri
+     in modo da sapere, per ciascun volo, chi sono i membri dello staff e chi sono i
+     passeggeri.
+-->
+
+<xml version="1.0" encoding="UTF-8">
+
+<!DOCTYPE aereoporto [
+
+<!ELEMENT aereoporto (volo+) (personale+) (passeggero+)>
+
+<!ELEMENT volo (partenza) (arrivo) (stato) (personale) (passeggeri) (luogo-di-partenza) (luogo-di-arrivo)>
+<!ELEMENT partenza (#PCDATA)>
+<!ELEMENT arrivo (#PCDATA)>
+<!ELEMENT stato (#PCDATA)>
+<!ELEMENT personale EMPTY>
+<!ELEMENT passeggeri EMPTY>
+<!ELEMENT luogo-partenza (#PCDATA)>
+<!ELEMENT luogo-arrivo (#PCDATA)>
+
+<!ELEMENT personale (nome) (cognome) (ruolo)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT cognome (#PCDATA)>
+<!ELEMENT ruolo (#PCDATA)>
+
+<!ELEMENT passeggero (nome) (cognome) (posto-a-sedere) (classe)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT cognome (#PCDATA)>
+<!ELEMENT posto-a-sedere (#PCDATA)>
+<!ELEMENT classe (#PCDATA)>
+
+<!ATTLIST volo id-volo CDATA #REQUIRED>
+<!ATTLIST volo personale-volo IDREFS #REQUIRED>
+<!ATTLIST volo passeggeri-volo IDREFS #REQUIRED>
+<!ATTLIST personale matricola-id ID #REQUIRED>
+<!ATTLIST passeggero id-passeggero ID #REQUIRED>
+
+
+]>
+
+<aereoporto>
+    
+    <personale matricola-id="m1">
+        <nome>Pietro</nome>
+        <cognome>Marzi</cognome>
+        <ruolo>Pilota</ruolo>
+    </personale>
+     <personale matricola-id="m2">
+        <nome>Alessia</nome>
+        <cognome>Marzi</cognome>
+        <ruolo>Co-pilota</ruolo>
+    </personale>
+    <personale matricola-id="m3">
+        <nome>Nadia</nome>
+        <cognome>Marzi</cognome>
+        <ruolo>Assistente</ruolo>
+    </personale>
+     <personale matricola-id="m4">
+        <nome>Filippo</nome>
+        <cognome>Rossi</cognome>
+        <ruolo>Pilota</ruolo>
+    </personale>
+     <personale matricola-id="m5">
+        <nome>Alessio</nome>
+        <cognome>Marzoni</cognome>
+        <ruolo>Co-pilota</ruolo>
+    </personale>
+     <personale matricola-id="m6">
+        <nome>Alice</nome>
+        <cognome>Rossi</cognome>
+        <ruolo>Assistente</ruolo>
+    </personale>
+    
+    <passeggero id-passeggero="p1">
+        <nome>Leonardo</nome>
+        <cognome>Rinaldi</cognome>
+        <posto-a-sedere>52</posto-a-sedere>
+        <classe>Prima</classe>
+    </passeggero>
+     <passeggero id-passeggero="p2">
+        <nome>Elon</nome>
+        <cognome>Musk</cognome>
+        <posto-a-sedere>51</posto-a-sedere>
+        <classe>Prima</classe>
+    </passeggero>
+     <passeggero id-passeggero="p3">
+        <nome>Nikola</nome>
+        <cognome>Tesla</cognome>
+        <posto-a-sedere>50</posto-a-sedere>
+        <classe>Prima</classe>
+    </passeggero>
+     <passeggero id-passeggero="p4">
+        <nome>Thomas</nome>
+        <cognome>Edison</cognome>
+        <posto-a-sedere>51</posto-a-sedere>
+        <classe>Seconda</classe>
+    </passeggero>
+    
+    <volo id-volo="v1">
+        <partenza>16:00</partenza>
+        <arrivo>24:00</arrivo>
+        <stato>In orario</stato>
+        <personale personale-volo="m1 m2 m3"></personale>
+        <passeggeri passeggeri-volo="p1 p2"></passeggeri>
+        <luogo-partenza>Roma</luogo-partenza>
+        <luogo-arrivo>San Francisco</luogo-arrivo>
+    </volo>
+    
+    <volo id-volo="v2">
+        <partenza>18:00</partenza>
+        <arrivo>20:00</arrivo>
+        <stato>In ritardo</stato>
+        <personale personale-volo= "m4 m5 m6"></personale>
+        <passeggeri passeggeri-volo="p3 p4"></passeggeri>
+        <luogo-partenza>Milano</luogo-partenza>
+        <luogo-arrivo>Londra</luogo-arrivo>
+    </volo>
+    
+</aereoporto>
