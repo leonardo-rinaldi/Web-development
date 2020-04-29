@@ -13,11 +13,11 @@
 <!ELEMENT vagone EMPTY>
 <!ATTLIST locomotiva id_locomotiva ID #REQUIRED>
 <!ATTLIST vagone id_vagoni ID #REQUIRED>
-<!ATTLIST treno id_treno ID #REQUIRED>
-                rif_locomotiva IDREF #REQUIRED>
-                rif_vagoni IDREFS #REQUIRED>
+<!ATTLIST treno id_treno ID #REQUIRED
+                rif_locomotiva IDREF #REQUIRED
+                rif_vagoni IDREFS #REQUIRED
                 rif_percorso IDREF #REQUIRED>
-<!ATTLIST percorsi rif_stazione IDREFS #REQUIRED>
+<!ATTLIST percorsi rif_stazione IDREFS #REQUIRED
                    id_percorso ID #REQUIRED>
 <!ATTLIST stazione id_stazione ID #REQUIRED>
     
