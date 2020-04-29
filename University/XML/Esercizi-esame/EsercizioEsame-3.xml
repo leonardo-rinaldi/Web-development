@@ -1,0 +1,80 @@
+<!--Esempio esercizio per esame-->
+
+<!--
+    Si scriva un documento XML valido (con DTD interno) che rappresenti
+    un "carrello della spesa" elettronico. In particolare il documento
+    è costituito da:
+
+    Un elemento radice basket che ha come figli un numero imprecisato
+    di elementi user e un elemento items.
+
+    Ogni elemento user ha come figli un elemento name e un elemento
+    email. Ha inoltre un attributo serial_id che lo identifica 
+    univocamente ed è obbligatorio.
+ 
+    L'elemento name può contenere solo del testo.
+
+    L'elemento email è vuoto e ha come unico attributo obligatorio
+    address.
+
+    L'elemento items ha come figli una qualsiasi sequenza di elementi
+    book, dvd e movie. Ha inoltre un attributo obbligatorio user che
+    fa riferimento all'utente che ha selezionato gli articoli.
+
+    Gli elementi book, dvd e movie sono tutti vuoti e hanno come
+    attributi title che è obbligatorio, price che è opzionale, e
+    availability che può assumere i valori in_store e sold_out con
+    in_store valore di default.
+    
+-->
+
+<xml version="1.0" encoding="UTF-8">
+
+
+<!DOCTYPE basket [
+<!ELEMENT basket (user+, items)>
+<!ELEMENT user (nome, email)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT email EMPTY>
+
+<!ELEMENT items (book+, dvd+, movies+)>
+<!ELEMENT book EMPTY>
+<!ELEMENT dvd EMPTY>
+<!ELEMENT moves EMPTY>
+
+<!ATTLIST email address CDATA #REQUIRED>
+<!ATTLIST user serial_id ID #REQUIRED>
+<!ATTLIST items user IDREF #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED
+               price CDATA #IMPLIED
+               availability (in_store | sold_out) "in_store">
+<!ATTLIST dvd title CDATA #REQUIRED
+              price CDATA #IMPLIED
+              availability (in_store | sold_out) "in_store">
+<!ATTLIST movies title CDATA #REQUIRED
+                 price CDATA #IMPLIED
+                 availability (in_store | sold_out) "in_store">
+
+]>
+
+<basket>
+    <user serial_id="id1">
+        <nome>Michele</nome>
+        <email address="michele@gmail.com"></email>
+    </user>
+    <user serial_id="id2">
+        <nome>Alessia</nome>
+        <email address="alessia@gmail.com"></email>
+    </user>
+    
+    <items user="id1">
+        <book title="Introduzione a Java" price="20$" availability="in_store"></book>
+        <book title="Made in Japan" price="25$" availability="sold_out"></book>
+        <dvd title="ACDC" price="5$" availability="in_store"></dvd>
+        <dvd title="LinkinPark" price="5$" availability="in_store"></dvd>
+        <movies title="Greenbook" price="15$" availability="in_store"></movies>
+        <movies title="SteveJobs" price="15$" availability="in_store"></movies>
+    </items>
+    
+</basket>
+

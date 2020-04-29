@@ -1,0 +1,73 @@
+<!--Esempio esercizio per esame-->
+<!--
+    Si scriva un documento XML valido dotato di DTD interno in modo 
+    da gestire la stuttura di un libro e di una collana di libri.
+ 
+    LIBRO: Si considerino un titolo, un numero identificativo univoco 
+           ISBN, uno o più autori. Il libro deve avere una struttura 
+           composta da capitoli e sezioni. All'interno di una sezione
+           possono essere presenti paragrafi e immagini in ordine e 
+           numero qualsiasi.
+           
+    COLLANA: Ciascuna collana ha un titolo, una descrizione e contiene 
+             i riferimenti agli ID dei propri libri.
+-->
+
+<xml version="1.0" encoding="UTF-8">
+
+<!DOCTYPE raccolta [
+<!ELEMENT raccolta (libro+, collana+)>
+<!ELEMENT libro (titolo, autori+, capitoli+)>
+<!ELEMENT titolo (#PCDATA)>
+<!ELEMENT autori (#PCDATA)>
+<!ELEMENT capitoli (sezioni+)>
+<!ELEMENT sezioni (paragrafi+, immagini+)>
+<!ELEMENT paragrafi (#PCDATA)>
+<!ELEMENT immagini (#PCDATA)>
+
+<!ELEMENT collana (titolo, descrizione, riferimento_libri+)>
+<!ELEMENT titolo (#PCDATA)>
+<!ELEMENT descrizione (#PCDATA)>
+<!ELEMENT riferimento_libri EMPTY>
+
+<!ATTLIST libro ISBN ID #REQUIRED>
+<!ATTLIST collana id-libri IDREFS #REQUIRED>
+
+]>
+
+<raccolta>
+    <libro ISBN="978-0-521-80926-9">
+        <titolo>The arts of electronics</titolo>
+        <autori>Horowitz Hill</autori>
+        <capitoli>
+            <sezioni> 
+                <paragrafi>Capacitors</paragrafi> 
+                <immagini>Capacitor.jpg</immagini> 
+            </sezioni>
+        </capitoli>
+    </libro>
+    
+     <libro ISBN="978-88-503-3404-9">
+        <titolo>HTML CSS</titolo>
+        <autori>John Ducket</autori>
+        <capitoli>
+            <sezioni>
+                <paragrafi>HTML 5</paragrafi>
+                <immagini>Layout.jpg</immagini>
+            </sezioni>
+        </capitoli>
+    </libro>
+    
+    <collana>
+        <titolo>Tecnologia</titolo>
+        <descrizione>I migliori libri inerenti alla tecnologia.</descrizione>
+        <riferimento_libri id-libri="978-0-521-80926-9 978-88-503-3404-9"></riferimento_libri>
+    </collana>
+    
+     <collana>
+        <titolo>Elettronica</titolo>
+        <descrizione>I migliori libri riguardanti l'elettronica</descrizione>
+        <riferimento_libri id-libri="978-0-521-80926-9"></riferimento_libri>
+    </collana>
+    
+</raccolta>
