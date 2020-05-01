@@ -80,6 +80,6 @@
     </treno>
     
     <percorso riferimento_treno="treno-1">
-        <tratto partenza="stazione-1" destinazione="stazione-2" tempo_percorrenza="40 minuti"></tratto>
+        <tratto partenza="stazione-1" destinazione="stazione-2" tempo_percorrenza="40-minuti"></tratto>
     </percorso>
 </ferrovia>
