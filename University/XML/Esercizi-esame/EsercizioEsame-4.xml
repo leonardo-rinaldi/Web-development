@@ -1,0 +1,85 @@
+<!--Esempio esercizio per esame-->
+
+<!--
+    Si scriva un documento XML valido (documento XML con DTD interno) che
+    descriva l'itinerario di un treno utilizzando i seguenti elementi:
+    
+    Sia ferrovia l'elemento radice avente come figli uno o più elementi
+    stazione, seguiti da uno o più elementi teno, seguiti da uno o più
+    elementi percorso;
+
+    l'elemento stazione ha come unici figli u elemento nome e un elemento 
+    indirizzo, e ha un attributo sigla (obbligatorio) che lo contraddistingue;
+
+    l'elemento treno ha come attributi sigla che lo identifica univocamente e 
+    tipo che può assumere i valori diretto, intercity ed eurostar (valore di 
+    default diretto);
+
+    l'elemento treno ha come figli gli elementi motrice, carozza_1classe, 
+    carozza_2classe e vagone_ristorante. Ogni treno deve avere una motrice in 
+    testa e una in coda mentre il resto dei vagoni possono essere mescolati a
+    piacere;
+
+    l'elemento percorso ha come figli un numero arbitrario di elementi tratto e
+    come unico attributo treno (obbligatorio) che fa riferimento al treno utilizzato;
+    
+    l'elemento tratto è un elemento vuoto con 2 attributi obbligatorio partenza e
+    destinazione che fanno riferimento a due stazioni, e tempo_percorrenza (opzionale)
+    che indica il tempo di percorrenza totale;
+
+    gli elementi nome e indirizzo possono contenere solo testo;
+
+    gli elementi motrice, carozza_1classe, carozza_2classe e vagone_ristorante sono vuoti.
+
+
+-->
+
+<? xml version="1.0 ?>
+
+<!DOCTYPE ferrovia [
+<!ELEMENT ferrovia (stazione+, treno+, percorso+)>
+<!ELEMENT stazione (nome, indirizzo)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT indirizzo (#PCDATA)>
+
+<!ELEMENT treno (motrice+, carozza_1classe+, carozza_2classe+, vagone_ristorante+)>
+<!ELEMENT motrice EMPTY>
+<!ELEMENT carozza_1classe EMPTY>
+<!ELEMENT carozza_2classe EMPTY>
+<!ELEMENT vagone_ristorante EMPTY>
+
+<!ELEMENT percorso (tratto+)>
+<!ELEMENT tratto EMPTY>
+
+<!ATTLIST stazione sigla_stazione ID #REQUIRED>
+<!ATTLIST treno sigla_treno ID #REQUIRED>
+<!ATTLIST treno tipo (diretto | intercity | eurostar) diretto>
+<!ATTLIST percorso riferimento_treno IDREF #REQUIRED>
+<!ATTLIST tratto partenza IDREF #REQUIRED>
+<!ATTLIST tratto destinazione IDREF #REQUIRED>
+<!ATTLIST tratto tempo_percorrenza CDATA #IMPLIED>
+
+]>
+
+<ferrovia>
+    <stazione sigla_stazione="stazione-1">
+        <nome>Stazione di casarsa</nome>
+        <indirizzo>Casarsa della delizia</indirizzo>
+    </stazione>
+    <stazione sigla_stazione="stazione-2">
+        <nome>Stazione di Udine</nome>
+        <indirizzo>Udine</indirizzo>
+    </stazione>
+    
+    <treno sigla_treno="treno-1" tipo="diretto">
+        <motrice></motrice>
+        <carozza_1classe></carozza_1classe>
+        <carozza_2classe></carozza_2classe>
+        <vagone_ristorante></vagone_ristorante>
+        <motrice></motrice>
+    </treno>
+    
+    <percorso riferimento_treno="treno-1">
+        <tratto partenza="stazione-1" destinazione="stazione-2" tempo_percorrenza="40 minuti"></tratto>
+    </percorso>
+</ferrovia>
