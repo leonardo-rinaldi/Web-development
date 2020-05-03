@@ -21,7 +21,7 @@
 
 <!DOCTYPE aereoporto [
 
-<!ELEMENT aereoporto (volo+, personale+, passeggero+)>
+<!ELEMENT aereoporto (personale+, passeggero+, volo+)>
 
 <!ELEMENT volo (partenza, arrivo, luogo-partenza, luogo-arrivo)>
 <!ELEMENT partenza (#PCDATA)>
