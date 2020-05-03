@@ -1,0 +1,75 @@
+<!--Esempio esercizio per esame-->
+
+<!--
+    In una località turistica potete acquistare un viaggio in barca in giornata.
+    Sono disponibili diverse imbarcazioni con diversi tour. Si progetti una 
+    struttura dati per la gestione di una serie di viaggi in barca per turisti.
+    Si considerino le imbarcazioni e l'anagrafica dei turisti. Inoltre, si 
+    considerino diversi tour composti da una serie di punti di interesse. Si 
+    gesticano infine i registri giornalieri con riferimenti a barca, tour che
+    deve percorrere la specifica giornata e tutti i turisti che deve imbarcare
+    per il viaggio.
+
+-->
+
+<xml version="1.0" encoding="UTF-8">
+
+<!DOCTYPE viaggi_barca [
+<!ELEMENT viaggi_barca (imbarcazione+, turisti+, tour+, registro_giornaliero+)>
+<!ELEMENT imbarcazione EMPTY>
+<!ELEMENT turisti (nome, cognome)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT cognome (#PCDATA)>
+<!ELEMENT tour (percorso)>
+<!ELEMENT percorso (#PCDATA)>
+<!ELEMENT registro_giornaliero (giornata)>
+<!ELEMENT giornata (#PCDATA)>
+<!ATTLIST imbarcazione ID_barca ID #REQUIRED>
+<!ATTLIST turisti ID_turista ID #REQUIRED>
+<!ATTLIST tour ID_tour ID #REQUIRED>
+<!ATTLIST registro_giornaliero riferimento_barca IDREF #REQUIRED>
+<!ATTLIST registro_giornaliero riferimento_tour IDREF #REQUIRED>
+<!ATTLIST registro_giornaliero turisti_da_imbarcare IDREFS #REQUIRED>
+
+]>
+
+<viaggi_barca>
+    
+    <imbarcazione ID_barca="b1"></imbarcazione>
+    <imbarcazione ID_barca="b2"></imbarcazione>
+    <imbarcazione ID_barca="b3"></imbarcazione>
+    
+    <turisti ID_turista="t1">
+        <nome>Marco</nome>
+        <cognome>Castagna</cognome>
+    </turisti>
+     <turisti ID_turista="t2">
+        <nome>Leonardo</nome>
+        <cognome>Rinaldi</cognome>
+    </turisti>
+     <turisti ID_turista="t3">
+        <nome>Alessia</nome>
+        <cognome>Castagna</cognome>
+    </turisti>
+    
+    <tour ID_tour="tour-1">
+        <percorso>Tour delle isole</percorso>
+    </tour>
+     <tour ID_tour="tour-2">
+        <percorso>Tour delle costa</percorso>
+    </tour>
+    <tour ID_tour="tour-3">
+        <percorso>Tour zona faro</percorso>
+    </tour>
+    
+    <registro_giornaliero riferimento_barca="b1" riferimento_tour="tour-1" turisti_da_imbarcare="t1 t2">
+        <giornata>Lunedì</giornata>
+    </registro_giornaliero>
+    <registro_giornaliero riferimento_barca="b2" riferimento_tour="tour-2" turisti_da_imbarcare="t2 t3">
+        <giornata>Martedì</giornata>
+    </registro_giornaliero>
+     <registro_giornaliero riferimento_barca="b3" riferimento_tour="tour-3" turisti_da_imbarcare="t1 t2 t3">
+        <giornata>Mercoledì</giornata>
+    </registro_giornaliero>
+    
+</viaggi_barca>
