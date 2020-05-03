@@ -36,7 +36,7 @@
 ]>
 
 <raccolta>
-    <libro ISBN="978-0-521-80926-9">
+    <libro ISBN="ISBN-978-0-521-80926-9">
         <titolo>The arts of electronics</titolo>
         <autori>Horowitz Hill</autori>
         <capitoli>
@@ -47,7 +47,7 @@
         </capitoli>
     </libro>
     
-     <libro ISBN="978-88-503-3404-9">
+     <libro ISBN="ISBN-978-88-503-3404-9">
         <titolo>HTML CSS</titolo>
         <autori>John Ducket</autori>
         <capitoli>
@@ -61,13 +61,13 @@
     <collana>
         <titolo-collana>Tecnologia</titolo-collana>
         <descrizione>I migliori libri inerenti alla tecnologia.</descrizione>
-        <riferimento_libri id-libri="978-0-521-80926-9 978-88-503-3404-9"></riferimento_libri>
+        <riferimento_libri id-libri="ISBN-978-0-521-80926-9 ISBN-978-88-503-3404-9"></riferimento_libri>
     </collana>
     
      <collana>
         <titolo-collana>Elettronica</titolo-collana>
         <descrizione>I migliori libri riguardanti l'elettronica</descrizione>
-        <riferimento_libri id-libri="978-0-521-80926-9"></riferimento_libri>
+        <riferimento_libri id-libri="ISBN-978-0-521-80926-9"></riferimento_libri>
     </collana>
     
 </raccolta>
