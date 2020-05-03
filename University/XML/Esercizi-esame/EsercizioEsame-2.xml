@@ -31,7 +31,7 @@
 <!ELEMENT riferimento_libri EMPTY>
 
 <!ATTLIST libro ISBN ID #REQUIRED>
-<!ATTLIST collana id-libri IDREFS #REQUIRED>
+<!ATTLIST riferimento-libri id-libri IDREFS #REQUIRED>
 
 ]>
 
