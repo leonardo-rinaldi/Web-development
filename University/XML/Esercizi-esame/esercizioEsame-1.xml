@@ -36,7 +36,7 @@
 
 <!ELEMENT passeggero (nome-passeggero, cognome-passeggero, posto-a-sedere, classe)>
 <!ELEMENT nome-passeggero (#PCDATA)>
-<!ELEMENT cognome-passeggero(#PCDATA)>
+<!ELEMENT cognome-passeggero (#PCDATA)>
 <!ELEMENT posto-a-sedere (#PCDATA)>
 <!ELEMENT classe (#PCDATA)>
 
