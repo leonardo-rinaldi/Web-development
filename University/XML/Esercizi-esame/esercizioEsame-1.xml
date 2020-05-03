@@ -34,9 +34,9 @@
 <!ELEMENT cognome (#PCDATA)>
 <!ELEMENT ruolo (#PCDATA)>
 
-<!ELEMENT passeggero (nome, cognome, posto-a-sedere, classe)>
-<!ELEMENT nome (#PCDATA)>
-<!ELEMENT cognome (#PCDATA)>
+<!ELEMENT passeggero (nome-passeggero, cognome-passeggero, posto-a-sedere, classe)>
+<!ELEMENT nome-passeggero (#PCDATA)>
+<!ELEMENT cognome-passeggero(#PCDATA)>
 <!ELEMENT posto-a-sedere (#PCDATA)>
 <!ELEMENT classe (#PCDATA)>
 
@@ -84,26 +84,26 @@
     </personale>
     
     <passeggero id-passeggero="p1">
-        <nome>Leonardo</nome>
-        <cognome>Rinaldi</cognome>
+        <nome-passeggero>Leonardo</nome-passeggero>
+        <cognome-passeggero>Rinaldi</cognome-passeggero>
         <posto-a-sedere>52</posto-a-sedere>
         <classe>Prima</classe>
     </passeggero>
      <passeggero id-passeggero="p2">
-        <nome>Elon</nome>
-        <cognome>Musk</cognome>
+        <nome-passeggero>Elon</nome-passeggero>
+        <cognome-passeggero>Musk</cognome-passeggero>
         <posto-a-sedere>51</posto-a-sedere>
         <classe>Prima</classe>
     </passeggero>
      <passeggero id-passeggero="p3">
-        <nome>Nikola</nome>
-        <cognome>Tesla</cognome>
+        <nome-passeggero>Nikola</nome-passeggero>
+        <cognome-passeggero>Tesla</cognome-passeggero>
         <posto-a-sedere>50</posto-a-sedere>
         <classe>Prima</classe>
     </passeggero>
      <passeggero id-passeggero="p4">
-        <nome>Thomas</nome>
-        <cognome>Edison</cognome>
+        <nome-passeggero>Thomas</nome-passeggero>
+        <cognome-passeggero>Edison</cognome-passeggero>
         <posto-a-sedere>51</posto-a-sedere>
         <classe>Seconda</classe>
     </passeggero>
