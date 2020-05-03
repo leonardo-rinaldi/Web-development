@@ -25,8 +25,8 @@
 <!ELEMENT paragrafi (#PCDATA)>
 <!ELEMENT immagini (#PCDATA)>
 
-<!ELEMENT collana (titolo, descrizione, riferimento_libri+)>
-<!ELEMENT titolo (#PCDATA)>
+<!ELEMENT collana (titolo-collana, descrizione, riferimento_libri+)>
+<!ELEMENT titolo-collana (#PCDATA)>
 <!ELEMENT descrizione (#PCDATA)>
 <!ELEMENT riferimento_libri EMPTY>
 
@@ -59,13 +59,13 @@
     </libro>
     
     <collana>
-        <titolo>Tecnologia</titolo>
+        <titolo-collana>Tecnologia</titolo-collana>
         <descrizione>I migliori libri inerenti alla tecnologia.</descrizione>
         <riferimento_libri id-libri="978-0-521-80926-9 978-88-503-3404-9"></riferimento_libri>
     </collana>
     
      <collana>
-        <titolo>Elettronica</titolo>
+        <titolo-collana>Elettronica</titolo-collana>
         <descrizione>I migliori libri riguardanti l'elettronica</descrizione>
         <riferimento_libri id-libri="978-0-521-80926-9"></riferimento_libri>
     </collana>
