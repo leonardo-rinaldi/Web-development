@@ -40,7 +40,7 @@
 <!ELEMENT items (book+, dvd+, movies+)>
 <!ELEMENT book EMPTY>
 <!ELEMENT dvd EMPTY>
-<!ELEMENT moves EMPTY>
+<!ELEMENT movies EMPTY>
 
 <!ATTLIST email address CDATA #REQUIRED>
 <!ATTLIST user serial_id ID #REQUIRED>
