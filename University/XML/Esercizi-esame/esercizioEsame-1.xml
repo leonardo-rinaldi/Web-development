@@ -23,7 +23,7 @@
 
 <!ELEMENT aereoporto (volo+, personale+, passeggero+)>
 
-<!ELEMENT volo (partenza, arrivo, partenza, arrivo)>
+<!ELEMENT volo (partenza, arrivo, luogo-partenza, luogo-arrivo)>
 <!ELEMENT partenza (#PCDATA)>
 <!ELEMENT arrivo (#PCDATA)>
 <!ELEMENT luogo-partenza (#PCDATA)>
