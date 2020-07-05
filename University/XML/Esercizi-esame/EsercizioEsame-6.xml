@@ -1,0 +1,45 @@
+<!--Esercizio esame tecnologie web e laboratorio-->
+<!-- Eserciio XML
+     Si scriva un documento XML valido dotato di DTD interno in modo da gestire le ordinazioni di un
+     ristorante in modalità food delivery (trasporto di cibo a domicilio). Si strutturino le informazioni
+     per gestire l'anagrafica del clienti e i loro indizzi, il menù e gli ordini anche con l'orario in cui
+     la merce deve essere consegnata. (per semplicità potete considerare che il ristorante accetti solamenti
+     ordini per la giornata in corso e non per i giorni futuri).
+-->
+
+<?xml version="1.0"?>
+<!DOCTYPE ordinazioni [
+<!ELEMENT ordinazioni (clienti+, menu, ordini+)>
+<!ELEMENT clienti (name)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST clienti indirizzo ID #REQUIRED>
+<!ELEMENT menu (piatto+)>
+<!ELEMENT piatto (#PCDATA)>
+<!ATTLIST piatto id_piatto ID #REQUIRED>
+<!ELEMENT ordini EMPTY>
+<!ATTLIST ordini codice_ordine CDATA #REQUIRED
+                 orario_consegna CDATA #REQUIRED
+                 indirizzo_ordine IDREF #REQUIRED
+                 id_piatto IDREFS #REQUIRED>
+]>
+
+<ordinazioni>
+    <clienti indirizzo="via_Dante_Alighieri_12">
+        <name>Gabriele</name>
+    </clienti>
+    <clienti indirizzo="via_del_sole_14">
+        <name>Alessia</name>
+    </clienti>
+    
+    <menu>
+        <piatto id_piatto="piatto1">Pasta</piatto>
+        <piatto id_piatto="piatto2">Hamburger</piatto>
+        <piatto id_piatto="piatto3">Polo</piatto>
+    </menu>
+    
+    <ordini codice_ordine="ordine1" orario_consegna="1700"
+            indirizzo_ordine="via_Dante_Alighieri_12" id_piatto="piatto1 piatto2"/>
+    <ordini codice_ordine="ordine2" orario_consegna="1900" indirizzo_ordine="via_del_sole_14"
+            id_piatto="piatto2 piatto3"/>
+    
+</ordinazioni>
