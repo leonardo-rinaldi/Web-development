@@ -1,3 +1,5 @@
+// Test for superglobal $_GET
+
 <?php
 
 if(isset($_GET['username']) && isset($_GET['lastname'])) {
