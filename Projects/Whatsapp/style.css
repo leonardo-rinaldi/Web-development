@@ -1,0 +1,353 @@
+/*
+   TABLE OF CONTENTS
+
+   -Header
+   -Chat
+   -Calls
+*/
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+*   Header
+*/
+
+header {
+    width: 100%;
+    height: 105px;
+    background-color: #075e54;
+}
+
+#title {
+    margin-top: 0px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 15px;
+    float: left;
+}
+
+.link {
+    text-decoration: none;
+    color: #128c7e;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 9px;
+}
+
+.link-block {
+     margin-top: 59px;   
+     text-align: center;
+     display: block;
+     
+}
+
+header .link:nth-child(1) {
+    padding-right: 85px;
+    padding-left: 10px;
+}
+
+header .link:nth-child(2) {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+header .link:nth-child(3) {
+    padding-left: 85px;
+    padding-right: 10px;
+}
+
+.link:hover {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.icons {
+    padding-top: 16px;
+}
+
+#search {
+    background-image: url(img/search.png);
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    float: right;
+    padding-left: 15px;
+    
+}
+
+#messages {
+    background-image: url(img/messages.png);
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    float: right;
+    padding-right: 15px;
+}
+
+#settings {
+    background-image: url(img/settings.png);
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    float: right;
+    padding-left: 15px;
+}
+
+/*
+*   Chat
+*/
+
+.chat {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+.chat:hover{
+    background-color: #EEEEEE;
+    border-bottom: 2px solid #EEEEEE;
+    
+}
+
+.chat a {
+    color: black;
+}
+
+.chat-name {
+    font-weight: bold;
+}
+
+.immagine {
+    height: 70px;
+    float: left;
+}
+
+.immagine-chat-1 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile1.jpg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-2 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 15px;
+    background: url(img/profile2.jpeg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-3 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile3.jpeg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-4 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile4.jpg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-5 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile5.jpg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-6 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile6.jpeg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-7 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    background: url(img/profile7.jpeg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-8 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile8.jpg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-9 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile9.jpg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-10 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile10.jpeg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-11 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile11.jpeg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-12 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile12.jpg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.immagine-chat-13 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(img/profile13.jpeg);
+    background-repeat: no-repeat;
+    background-size: 55px 55px;
+}
+
+.messages {
+    border-bottom: 2px solid #EEEEEE;
+    height: 70px;
+    width: 400px;
+    position: absolute;
+    float: left;
+    margin-left: 85px;
+    padding-bottom: 10px;
+    line-height: 1;
+}
+
+.text-message{
+    padding-bottom: 5px
+}
+
+.date {
+    float: right;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.not-read {
+    color: #25d366;
+} 
+
+.notification {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #25d366;
+    border-radius: 50%;
+    color: white;
+    margin-top: 40px;
+    margin-left: 370px;
+    font-size: 13px;
+    
+}
+
+.notification p {
+    text-align: center;
+    margin-top: 5px; 
+}
+
+/*
+ *  CALLS
+ */
+
+.phone {
+    position: absolute;
+    margin-left: 370px;
+    margin-top: 25px;
+    height: 30px
+}
+
+.arrow {
+  height: 15px;
+}
+
+.text-message-calls {
+    display: inline;
+    
+    
+}
+
+
+
+
