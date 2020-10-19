@@ -1,0 +1,23 @@
+body {
+   background-color: #003049;
+    font-family: sans-serif;
+}
+
+.contenitore {
+    width: 500px;
+    height: 170px;
+    display: block;
+    margin: 0 auto;
+    background-color: #fcbf49;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.titolo {
+    padding: 10px;
+    color: #000000
+}
+
+.messaggio {
+    color: #d62828;
+}
