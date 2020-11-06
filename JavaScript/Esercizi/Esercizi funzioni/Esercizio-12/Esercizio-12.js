@@ -32,7 +32,6 @@ function controllaSePrimo(n) {
     return risultato;
 }
 
-
 function stampaNumeriPrimi(n) {
     var i = 0;          //indice
     var valore = 2;     //valore iniziale
