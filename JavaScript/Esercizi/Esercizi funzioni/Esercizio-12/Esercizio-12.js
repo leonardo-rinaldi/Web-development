@@ -32,11 +32,6 @@ function controllaSePrimo(n) {
     return risultato;
 }
 
-/*
-    Stampa i primi n numeri primi, se il numero è primo l'indice i viene
-    aumentato di 1 e si passa al valore successivo da controllare aumentando
-    il valore di 1.
-*/
 
 function stampaNumeriPrimi(n) {
     var i = 0;          //indice
