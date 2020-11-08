@@ -24,7 +24,7 @@ function controllaSePalindroma(stringa) {
 }
 
 /*
-    Scrive la stringa da destra a sinistra e rimuove gli spazi
+    Scrive la stringa da destra a sinistra e rimuove gli spaz
 */
 
 function giraStringa(stringa) {
