@@ -7,12 +7,12 @@ function loadDati() {
     .done(function(data) {  //se l'operazione va a buon fine
 
         var dati = data;    //memorizzo i dati JSON in una variabile
-        var evento = "eventoUno"; //oggetto evento presente nell'array di dati JSON
+        var evento = "eventoUno"; 
         // var oggetto = "eventoDue";
         // var oggetto = "eventoTre";
 
         for(var i = 0; i < dati[evento].length; i++) {
-            var msg = dati[evento][i].luogo + " " + dati[evento][i].dataEvento;  //dati[oggetto Nell'Array][posizione].proprietà, stampa i dati contenuti dentro "evento"
+            var msg = dati[evento][i].luogo + " " + dati[evento][i].dataEvento; 
             $('#container').html(msg);
         }
 
