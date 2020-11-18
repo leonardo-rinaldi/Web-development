@@ -1,0 +1,20 @@
+{
+    "eventoUno": [
+       {
+            "luogo": "San Francisco",
+            "dataEvento": "12/02/2019"
+       }
+    ],
+    "eventoDue": [
+       {
+            "luogo": "New York",
+            "dataEvento": "09/02/1999"
+       }
+    ],
+    "eventoTre": [
+        {
+             "luogo": "Roma",
+             "dataEvento": "09/02/2020"
+        }
+     ]
+}
